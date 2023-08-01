@@ -49,10 +49,10 @@ class typeOrganizer:
         return dest
 
     def updateName(self, file):
-        file_wihtout_extension = os.path.splitext(file)[0]
+        file_without_extension = os.path.splitext(file)[0]
         file_extension = os.path.splitext(file)[1]
         current_datetime = datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
-        new_file_path = file_wihtout_extension + '_' + str(current_datetime) + file_extension
+        new_file_path = file_without_extension + '_' + str(current_datetime) + file_extension
         os.rename(file, new_file_path)
         return new_file_path
     
